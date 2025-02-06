@@ -1,1 +1,70 @@
-css
+/* Reset some default browser styles */
+body, h1, p, nav, footer {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Right Side Navigation Styles (vertical, no background) */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  /* Removed background color */
+}
+
+nav a {
+  color: inherit; /* Uses the default text color */
+  text-decoration: none;
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content container */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  text-align: center;
+  /* Add right margin so content doesn't overlap with nav */
+  margin-right: 200px;
+}
+
+.container h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.container p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Footer styles */
+footer {
+  background-color: #f1f1f1;
+  color: #333;
+  text-align: center;
+  padding: 1em 0;
+}
