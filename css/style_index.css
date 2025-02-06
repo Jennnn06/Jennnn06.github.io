@@ -13,25 +13,27 @@ body {
   min-height: 100vh;
 }
 
-/* Right Side Navigation Styles (vertical, no background) */
+/* Top Right Navigation Styles (horizontal, no background) */
 nav {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100%;
-  padding: 2em;
+  padding: 1em;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  /* Removed background color */
+  flex-direction: row;
+  align-items: center;
+  /* No background color set */
 }
 
 nav a {
-  color: inherit; /* Uses the default text color */
+  color: inherit;  /* Use default text color */
   text-decoration: none;
-  margin: 0.5em 0;
+  margin-left: 1em;
   font-weight: bold;
+}
+
+nav a:first-child {
+  margin-left: 0;
 }
 
 nav a:hover {
@@ -47,8 +49,8 @@ nav a:hover {
   align-items: center;
   padding: 2em;
   text-align: center;
-  /* Add right margin so content doesn't overlap with nav */
-  margin-right: 200px;
+  /* Add top padding so content isn't hidden behind the fixed nav */
+  padding-top: 4em;
 }
 
 .container h1 {
