@@ -11,9 +11,8 @@
     <link href="css/style_index.css" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
         <a class="navbar-brand" href="#">My Portfolio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar" aria-controls="portfolioNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,10 +32,10 @@
             </ul>
         </div>
         </div>
-    </nav>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
+  <!-- About Section -->
+  <section id="about" class="about-section">
         <div class="container">
         <div class="row align-items-center">
             <!-- Profile Picture -->
@@ -54,48 +53,97 @@
             </div>
         </div>
         </div>
-    </section>
+  </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <div class="container">
-        <div class="row">
-            <!-- Project Info -->
-            <div class="col-md-6 mb-4">
-            <h2>Projects</h2>
-            <p>Here are some of the games and projects I’ve worked on.</p>
+    <div class="container">
+      <!-- Project Items Wrapper -->
+      <div id="projectItems">
+        <!-- Project 1 -->
+        <div class="project-item" data-project-index="0">
+          <div class="row">
+            <!-- Left Panel: Project Info -->
+            <div class="col-md-4 mb-4">
+              <h2 id="projectTitle0">Project 1</h2>
+              <p id="projectDescription0">
+                Description for Project 1 goes here. It explains what the project is about, technologies used, etc.
+              </p>
             </div>
-            <!-- Projects Carousel / Slideshow -->
-            <div class="col-md-6">
-            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Right Panel: Carousel for Project Images -->
+            <div class="col-md-8">
+              <div id="projectCarousel0" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/person.jpg" class="d-block w-100" alt="Project 1">
+                  <div class="carousel-item active">
+                    <img src="images/person.jpg" class="d-block w-100" alt="Project 1 - Picture 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/person1.jpg" class="d-block w-100" alt="Project 1 - Picture 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/person2.jpg" class="d-block w-100" alt="Project 1 - Picture 3">
+                  </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="images/person1.jpg" class="d-block w-100" alt="Project 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/person2.jpg" class="d-block w-100" alt="Project 3">
-                </div>
-                </div>
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel0" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel0" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
                 </button>
+              </div>
             </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-item d-none" data-project-index="1">
+          <div class="row">
+            <!-- Left Panel: Project Info -->
+            <div class="col-md-4 mb-4">
+              <h2 id="projectTitle1">Project 2</h2>
+              <p id="projectDescription1">
+                Description for Project 2 goes here. It explains what the project is about, technologies used, etc.
+              </p>
             </div>
+            <!-- Right Panel: Carousel for Project Images -->
+            <div class="col-md-8">
+              <div id="projectCarousel1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/person2.jpg" class="d-block w-100" alt="Project 2 - Picture 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/person1.jpg" class="d-block w-100" alt="Project 2 - Picture 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/person.jpg" class="d-block w-100" alt="Project 2 - Picture 3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
+        <!-- Add additional project items here following the same structure -->
+      </div>
+      <!-- Navigation Buttons for Switching Projects -->
+      <div class="d-flex justify-content-between mt-3">
+        <button id="prevProjectMain" class="btn btn-outline-light">&laquo; Previous Project</button>
+        <button id="nextProjectMain" class="btn btn-outline-light">Next Project &raquo;</button>
+      </div>
+    </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact" class="contact-form">
+  <!-- Contact Form Section -->
+  <section id="contact" class="contact-form">
         <div class="container">
         <h2 class="mb-4">Contact Me</h2>
         <p>Feel free to reach out for collaborations or any inquiries.</p>
@@ -117,16 +165,19 @@
             </div>
         </form>
         </div>
-    </section>
+  </section>
 
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="container">
-        &copy; 2025. All rights reserved.
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="text-center">
+      <div class="container">
+      &copy; 2025. All rights reserved.
+      </div>
+  </footer>
 
-    <!-- Bootstrap JS Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <!-- Switch Project -->
+  <script src="js/switch_project.js"></script>
 </body>
 </html>
