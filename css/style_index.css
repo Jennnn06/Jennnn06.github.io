@@ -1,34 +1,30 @@
-/* Reset some default browser styles */
+/* Default browser styles */
 body, h1, p, nav, footer {
+  font-family: 'Press Start 2P', cursive; 
   margin: 0;
   padding: 0;
 }
 
-/* Basic body styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-/* Top Right Navigation Styles */
+/* Navigation section */
 nav {
   position: fixed;
   top: 0;
   right: 0;
-  padding: 1em 2em; 
+  padding: 1em 2em;
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: transparent; 
 }
 
 nav a {
-  color: inherit;  /* Use default text color */
+  color: #888; 
   text-decoration: none;
   margin-left: 1em;
+  font-size: 18px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:first-child {
@@ -36,36 +32,108 @@ nav a:first-child {
 }
 
 nav a:hover {
+  color: black; 
+}
+
+nav a:active {
+  color: black;
   text-decoration: underline;
 }
 
-/* Main content container */
+
+/* Body and container */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 4em; 
+}
 .container {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 6em auto 0;
   padding: 2em;
-  text-align: center;
-  /* Add top padding so content isn't hidden behind the fixed nav */
-  padding-top: 4em;
+  gap: 2em; 
 }
 
-.container h1 {
+
+/* About section */
+.about {
+  flex: 1;
+  text-align: left;
+}
+
+.about h1 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
 }
 
-.container p {
+.about p {
   font-size: 1.2em;
   color: #555;
 }
 
+.profile-pic {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-pic img {
+  width: 250px; 
+  height: auto;
+  border-radius: 10px; 
+}
+
+
+/* Projects section */
+.projects {
+  background-color: #000;
+  color: white;
+  padding: 3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.slideshow {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+  position: relative;
+  width: 400px; 
+  height: 400px; 
+  overflow: hidden; 
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: none;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+
 /* Footer styles */
 footer {
-  background-color: #f1f1f1;
-  color: #333;
   text-align: center;
   padding: 1em 0;
+  background-color: #f1f1f1;
+  color: #333;
+  margin-top: auto;
+}
+
+/* Smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
 }
