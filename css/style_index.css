@@ -1,10 +1,15 @@
+/* Html style */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4em; 
+}
+
 /* Default browser styles */
 body, h1, p, nav, footer {
   font-family: 'Press Start 2P', cursive; 
   margin: 0;
   padding: 0;
 }
-
 
 /* Navigation section */
 nav {
@@ -77,6 +82,28 @@ body {
   color: #555;
 }
 
+/* About Section Wrapper */
+.about-section {
+  width: 100%;
+  min-height: calc(100vh - 4em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; 
+  padding: 2em 0;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 2em;
+  gap: 2em;
+}
+
+/* About Section Picture */
 .profile-pic {
   flex: 1;
   text-align: center;
@@ -131,11 +158,6 @@ footer {
   background-color: #f1f1f1;
   color: #333;
   margin-top: auto;
-}
-
-/* Smooth scrolling effect */
-html {
-  scroll-behavior: smooth;
 }
 
 /* ===== Mobile Adjustments ===== */
