@@ -137,3 +137,45 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
+/* ===== Mobile Adjustments ===== */
+@media screen and (max-width: 768px) {
+  /* Stack columns for containers */
+  .container {
+    flex-direction: column;
+    margin: 6em auto 0;
+    padding: 1em;
+  }
+
+  /* For the projects section, ensure the inner container fills the width */
+  .projects .container {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+  
+  .projects {
+    display: block;
+    padding: 2em 1em;
+  }
+  
+  /* Adjust the slideshow size */
+  .slideshow {
+    width: 90%;
+    height: auto; /* Let the height adjust automatically */
+    max-width: none;
+    margin: 0 auto;
+  }
+  
+  .slide {
+    height: auto;
+  }
+  
+  /* Improve mobile navigation appearance */
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
