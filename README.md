@@ -15,6 +15,7 @@ Open `index.html` in your browser or use your editor's static preview server.
 - Expenses Tracker is presented as a desktop tool built at the manager's request, with two screenshots using confirmed test data.
 - The toolkit lists Android development with Java, React for web interfaces, PHP & Laravel, and MySQL.
 - Responsive layouts and support for reduced motion.
+- Shared links use a dedicated image of the JenOS phone instead of a project screenshot.
 - Direct contact through LinkedIn, GitHub, and Facebook.
 
 ## Editing
@@ -37,3 +38,9 @@ The inventory showcase uses blank Android forms and the existing demo-data web s
 Publish from `main` and `/(root)` in the repository's **Settings → Pages**. Commit and push changes to update the live site; no build command is needed.
 
 The CSS and JavaScript URLs in `index.html` include a `?v=` content version so browsers fetch the redesigned assets instead of cached copies. Change that version whenever you update the corresponding file. If the live page still shows an older design immediately after a successful deployment, hard-refresh with **Ctrl+Shift+R** or open it in a private window.
+
+## Link previews
+
+`index.html` includes Open Graph and large-image Twitter Card metadata pointing to `images/jenos-social-preview-v1.png`, a 1200 × 630 render of the existing phone-themed hero. The phone is interactive on the website; shared-link previews use this static image.
+
+Commit and push both the HTML and image to publish the preview. Chat apps may retain an older preview after deployment. For Facebook or Messenger, use the [Sharing Debugger](https://developers.facebook.com/tools/debug/) to request a fresh preview after the new image is live. If the preview image changes later, save a new versioned filename and update the metadata URLs.
