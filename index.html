@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="css/style_index.css?v=1bdde8a3bcdd" rel="stylesheet">
+  <link href="css/style_index.css?v=17fe75bfbe78" rel="stylesheet">
   <script>try{if(localStorage.getItem('jen-portfolio-theme')==='dark')document.documentElement.dataset.theme='dark'}catch{}</script>
-  <script src="js/switch_project.js?v=1a8b76cf07fa" defer></script>
+  <script src="js/switch_project.js?v=5f9efd4ed335" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,6 +38,7 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
     <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 8 10-5 10 5-10 5ZM6 10v7c3 3 9 3 12 0v-7m4-2v9"/></symbol>
     <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 3h14v19l-3-2-4 2-4-2-3 2ZM9 7h6m-6 4h6m-6 4h3"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="14" r="8"/><path d="M12 10v4l3 2M9 2h6m-3 0v4m6 1 2-2"/></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5Z"/></symbol>
   </svg>
   <header class="site-header page-width">
@@ -73,8 +74,11 @@
               </section>
               <section class="phone-panel" id="phone-panel-work" data-phone-panel="work" role="tabpanel" aria-labelledby="phone-tab-work" tabindex="0" hidden>
                 <div class="phone-section-label">THE APP DRAWER</div><h2>Things I’ve built.</h2><p class="phone-panel-intro">Different ideas. The same attention to detail.</p>
-                <button class="phone-project phone-project-featured" type="button" data-gallery="sales"><span class="app-icon app-sales"><svg class="icon"><use href="#i-receipt"/></svg></span><span><strong>Sales Pro</strong><small>Latest company project</small></span><svg class="icon"><use href="#i-chevron"/></svg></button>
-                <button class="phone-project" type="button" data-gallery="inventory"><span class="app-icon app-work"><svg class="icon"><use href="#i-database"/></svg></span><span><strong>Inventory Management</strong><small>Connected systems</small></span><svg class="icon"><use href="#i-chevron"/></svg></button>
+                <button class="phone-project phone-project-featured" type="button" data-gallery="sales"><span class="app-icon app-sales"><svg class="icon"><use href="#i-receipt"/></svg></span><span><strong>Sales Pro</strong><small>Android POS + web admin</small></span><svg class="icon"><use href="#i-chevron"/></svg></button>
+                <button class="phone-web-link" type="button" data-gallery="sales-web"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><span>Sales Pro web admin</span><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+                <button class="phone-project" type="button" data-gallery="inventory"><span class="app-icon app-work"><svg class="icon"><use href="#i-database"/></svg></span><span><strong>Inventory &amp; Members</strong><small>Android scanner + web admin</small></span><svg class="icon"><use href="#i-chevron"/></svg></button>
+                <button class="phone-web-link" type="button" data-gallery="inventory-mobile"><svg class="icon" aria-hidden="true"><use href="#i-android"/></svg><span>Inventory Android scanner</span><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+                <button class="phone-project" type="button" data-gallery="billiard"><span class="app-icon app-timer"><svg class="icon"><use href="#i-timer"/></svg></span><span><strong>Billiard Table Timer</strong><small>Custom client app</small></span><svg class="icon"><use href="#i-chevron"/></svg></button>
                 <button class="phone-project" type="button" data-gallery="noli"><span class="app-icon app-toolkit"><svg class="icon"><use href="#i-spark"/></svg></span><span><strong>Ibarra’s Quest</strong><small>Interactive learning</small></span><svg class="icon"><use href="#i-chevron"/></svg></button>
                 <a class="phone-text-link" href="#projects">Explore all projects <svg class="icon"><use href="#i-arrow"/></svg></a>
               </section>
@@ -95,22 +99,27 @@
     <div class="specialties page-width" aria-label="Development focus"><span>BUILT WITH INTENTION</span><div><svg class="icon"><use href="#i-android"/></svg> Android development</div><span class="specialty-divider" aria-hidden="true">✳</span><div><svg class="icon"><use href="#i-wifi"/></svg> Online &amp; offline systems</div><span class="specialty-divider" aria-hidden="true">✳</span><div><svg class="icon"><use href="#i-code"/></svg> A thoughtful user experience</div></div>
     <section class="work-section page-width section-space" id="projects" aria-labelledby="work-title">
       <div class="section-heading"><div><span class="eyebrow section-eyebrow"><span class="section-number">01 /</span> SELECTED WORK</span><h2 id="work-title">From idea to <span class="serif-word">in your hands.</span></h2></div><span class="section-aside">Real problems.<br>Things I’ve built to solve them.</span></div>
-      <div class="work-toolbar"><div class="project-filters" role="group" aria-label="Filter projects"><button type="button" data-project-filter="all" aria-pressed="true">All projects <span>03</span></button><button type="button" data-project-filter="systems" aria-pressed="false">Systems</button><button type="button" data-project-filter="interactive" aria-pressed="false">Interactive</button></div><span id="projectCount" class="project-count" aria-live="polite">03 projects</span></div>
+      <div class="work-toolbar"><div class="project-filters" role="group" aria-label="Filter projects"><button type="button" data-project-filter="all" aria-pressed="true">All projects <span>04</span></button><button type="button" data-project-filter="systems" aria-pressed="false">Systems</button><button type="button" data-project-filter="interactive" aria-pressed="false">Interactive</button></div><span id="projectCount" class="project-count" aria-live="polite">04 projects</span></div>
       <div class="project-grid">
         <article class="featured-project" id="pos-project" data-project-card data-category="systems" aria-labelledby="sales-pro-title">
           <div class="featured-copy">
             <div class="project-meta"><span>01 / FEATURED PROJECT</span><span class="featured-badge"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> LATEST COMPANY PROJECT</span></div>
             <h3 id="sales-pro-title">Sales Pro</h3>
-            <p class="featured-type">Android Point of Sale</p>
-            <p class="featured-description">My latest major company project: an Android point-of-sale system bringing checkout, payments, inventory, and day-to-day reporting into one workflow.</p>
+            <p class="featured-type">Android POS + Web Admin</p>
+            <p class="featured-description">My latest major company project: an Android point-of-sale app with a companion web admin for managing products, stock, and daily operations.</p>
             <ul class="featured-capabilities" aria-label="Sales Pro features">
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Checkout &amp; payments</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Inventory &amp; stock control</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Product management</li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Operational reporting</li>
             </ul>
-            <div class="tags"><span>Android</span><span>Point of sale</span><span>Business operations</span></div>
-            <div class="featured-actions"><button class="button button-lime" type="button" data-gallery="sales">Explore Sales Pro <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><span>12 app screenshots</span></div>
+            <div class="tags"><span>Android</span><span>Point of sale</span><span>Web administration</span></div>
+            <div class="featured-actions">
+              <button class="button button-lime" type="button" data-gallery="sales">Android app <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <button class="button button-secondary" type="button" data-gallery="sales-web">Web admin <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+            <p class="featured-gallery-summary">12 Android screenshots / 4 web screenshots + login reconstruction</p>
+            <p class="featured-contribution">I built the Android app and web functionality. The web gallery includes a reconstructed original login and current screens with a later interface redesign by another developer.</p>
           </div>
           <button class="featured-preview" type="button" data-gallery="sales" aria-label="View Sales Pro's 12 project screenshots">
             <span class="featured-preview-label"><svg class="icon" aria-hidden="true"><use href="#i-android"/></svg> SALES PRO / THE APP IN ACTION</span>
@@ -118,8 +127,51 @@
             <span class="featured-preview-caption"><span>Made for the everyday business of selling.</span><span class="featured-preview-arrow"><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></span></span>
           </button>
         </article>
-        <article class="project-card" data-project-card data-category="systems"><button class="project-visual inventory-visual" type="button" data-gallery="inventory" aria-label="View Web Inventory Management screenshots"><span class="visual-label">WEB + MOBILE INTEGRATION</span><span class="browser-frame"><span class="browser-toolbar"><span></span><span></span><span></span><i>inventory / dashboard</i></span><img src="images/project_web_inventory/2.jpg" alt="Inventory management dashboard with searchable manager records and ID printing actions" width="1365" height="624" loading="lazy"></span><span class="visual-action"><svg class="icon"><use href="#i-up-right"/></svg></span></button><div class="project-content"><div class="project-meta"><span>CONNECTED SYSTEMS</span><span>02</span></div><h3>Web Inventory Management</h3><p>Keeping inventory and people in sync. A web system with mobile time tracking, member management, and ID printing.</p><div class="project-bottom"><div class="tags"><span>PHP</span><span>MySQL</span><span>Mobile integration</span></div><button class="project-open" type="button" data-gallery="inventory" aria-label="Open Web Inventory Management gallery"><svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-        <article class="project-card" data-project-card data-category="interactive"><button class="project-visual game-visual" type="button" data-gallery="noli" aria-label="View Ibarra’s Quest screenshots"><span class="visual-label">A CLASSIC STORY. A NEW WAY TO PLAY.</span><span class="game-screenshot"><img src="images/project_noli_me/1.jpg" alt="Ibarra’s Quest title screen, a pixel-art game based on Noli Me Tangere" width="1612" height="720" loading="lazy"></span><span class="game-star" aria-hidden="true">✳</span><span class="visual-action"><svg class="icon"><use href="#i-up-right"/></svg></span></button><div class="project-content"><div class="project-meta"><span>CAPSTONE / EDUCATIONAL GAME</span><span>03</span></div><h3>Ibarra’s Quest</h3><p>Bringing Noli Me Tangere to life through a 2D adventure, animated chapters, and quizzes that make literature interactive.</p><div class="project-bottom"><div class="tags"><span>2D game</span><span>Storytelling</span><span>Education</span></div><button class="project-open" type="button" data-gallery="noli" aria-label="Open Ibarra’s Quest gallery"><svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
+        <article class="featured-project inventory-featured" id="inventory-project" data-project-card data-category="systems" aria-labelledby="inventory-title">
+          <div class="featured-copy">
+            <div class="project-meta"><span>02 / CONNECTED SYSTEM</span><span class="featured-badge"><svg class="icon" aria-hidden="true"><use href="#i-android"/></svg> ANDROID + WEB</span></div>
+            <h3 id="inventory-title">Inventory &amp; Member Management</h3>
+            <p class="featured-type">Android Scanner + Web Admin</p>
+            <p class="featured-description">A connected Android and web system for member records, QR-coded IDs, and time-in registration. Desktop administration meets on-site mobile workflows.</p>
+            <ul class="featured-capabilities" aria-label="Inventory and member management features">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Member administration</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> QR ID scanning</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> ID &amp; QR printing</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Mobile time-in tracking</li>
+            </ul>
+            <div class="tags"><span>Android</span><span>PHP</span><span>MySQL</span><span>QR integration</span></div>
+            <div class="featured-actions">
+              <button class="button button-lime" type="button" data-gallery="inventory-mobile">Android app <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <button class="button button-secondary" type="button" data-gallery="inventory">Web admin <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+            <p class="featured-gallery-summary">2 Android screenshots / 4 web screenshots</p>
+            <p class="featured-contribution">I built both the Android scanner and the web administration system, connecting mobile registration with centrally managed member records.</p>
+          </div>
+          <button class="featured-preview inventory-preview" type="button" data-gallery="inventory" aria-label="View Inventory and Member Management web screenshots">
+            <span class="featured-preview-label"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg> WEB ADMIN + ANDROID SCANNER</span>
+            <span class="inventory-composition">
+              <span class="browser-frame"><span class="browser-toolbar"><span></span><span></span><span></span><i>member management / web admin</i></span><img src="images/project_web_inventory/2.jpg" alt="Web administration dashboard with searchable demo member records and ID printing actions" width="1365" height="624" loading="lazy"></span>
+              <span class="inventory-handset"><img src="images/project_web_inventory/mobile1.jpg" alt="Android time-in form with QR ID scanning and registration controls, shown with empty fields" width="720" height="1612" loading="lazy"></span>
+            </span>
+            <span class="featured-preview-caption"><span>Desktop records. Mobile check-ins.</span><span class="featured-preview-arrow"><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></span></span>
+          </button>
+        </article>
+        <article class="project-card" id="billiard-project" data-project-card data-category="systems" aria-labelledby="billiard-title">
+          <button class="project-visual billiard-visual" type="button" data-gallery="billiard" aria-label="View Billiard Table Timer and its client installation">
+            <span class="visual-label">CUSTOM BUILT / IN USE BY A CLIENT</span>
+            <span class="timer-phone"><img src="images/project_billiard_timer/bea260ae-709b-4a4a-8781-91c7d1110f81.jpg" alt="Android billiard table timer showing one active session and start controls for other tables" width="720" height="1612" loading="lazy"></span>
+            <span class="client-setup-photo"><img src="images/project_billiard_timer/1785edb1-70e0-47ee-ad72-c31172c3bc10.jpg" alt="The custom table timer running on a screen at the client's venue" width="720" height="1448" loading="lazy"></span>
+            <span class="client-installation-label"><span class="status-dot"></span> At the client's venue</span>
+            <span class="visual-action"><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></span>
+          </button>
+          <div class="project-content">
+            <div class="project-meta"><span>CLIENT PROJECT / ANDROID APP</span><span>03</span></div>
+            <h3 id="billiard-title">Billiard Table Timer</h3>
+            <p>A custom Android timer built for a billiards client. Start and end sessions per table, track elapsed time, and keep active tables visible at a glance.</p>
+            <div class="project-bottom"><div class="tags"><span>Android</span><span>Session timing</span><span>Client installation</span></div><button class="project-open" type="button" data-gallery="billiard" aria-label="Open Billiard Table Timer gallery"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </article>
+        <article class="project-card" data-project-card data-category="interactive"><button class="project-visual game-visual" type="button" data-gallery="noli" aria-label="View Ibarra’s Quest screenshots"><span class="visual-label">A CLASSIC STORY. A NEW WAY TO PLAY.</span><span class="game-screenshot"><img src="images/project_noli_me/1.jpg" alt="Ibarra’s Quest title screen, a pixel-art game based on Noli Me Tangere" width="1612" height="720" loading="lazy"></span><span class="game-star" aria-hidden="true">✳</span><span class="visual-action"><svg class="icon"><use href="#i-up-right"/></svg></span></button><div class="project-content"><div class="project-meta"><span>CAPSTONE / EDUCATIONAL GAME</span><span>04</span></div><h3>Ibarra’s Quest</h3><p>Bringing Noli Me Tangere to life through a 2D adventure, animated chapters, and quizzes that make literature interactive.</p><div class="project-bottom"><div class="tags"><span>2D game</span><span>Storytelling</span><span>Education</span></div><button class="project-open" type="button" data-gallery="noli" aria-label="Open Ibarra’s Quest gallery"><svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
       </div>
     </section>
     <section class="about-section page-width section-space" id="about" aria-labelledby="about-title">

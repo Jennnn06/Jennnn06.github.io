@@ -170,6 +170,17 @@
           { file: "images/project_sales_pro/Screenshot_20261108-171215.png", caption: "Reports menu with cashier and terminal operations" },
         ],
       },
+      "sales-web": {
+        title: "Sales Pro — Web Administration",
+        description: "I developed the original web management functionality for Sales Pro. The first image reconstructs the original simple login from my description; it is an illustration, not an original screenshot. The following four screenshots show the current system, including a later interface redesign by another developer.",
+        images: [
+          { file: "images/project_sales_pro/web_login_reconstruction.png", caption: "Original login reconstruction — illustrated from my description, not an original screenshot" },
+          { file: "images/project_sales_pro/web3.PNG", caption: "Product catalog with search, pricing, editing, and export controls" },
+          { file: "images/project_sales_pro/web2.PNG", caption: "Physical inventory records with posting status and product details" },
+          { file: "images/project_sales_pro/inventory_report.PNG", caption: "Inventory dashboard with stock quantities, valuation, and department breakdowns" },
+          { file: "images/project_sales_pro/zread.PNG", caption: "Cashier end-of-day summary with payments, tax breakdown, and drawer balances" },
+        ],
+      },
       noli: {
         title: "Noli Me Tangere: Ibarra’s Quest",
         description: "A 2D educational capstone game that brings José Rizal’s novel to life through animated chapters, roleplay, and quizzes.",
@@ -179,12 +190,30 @@
         })),
       },
       inventory: {
-        title: "Web Inventory Management",
-        description: "An inventory and personnel management system with mobile integration, ID printing, and check-in and check-out tracking.",
-        images: Array.from({ length: 4 }, (_, index) => ({
-          file: `images/project_web_inventory/${index + 1}.jpg`,
-          caption: `Web Inventory Management — screenshot ${index + 1} of 4`,
-        })),
+        title: "Inventory & Member Management — Web Admin",
+        description: "A web administration system connected to an Android time-in app, with member management and QR-coded ID printing. These web screenshots use demo member records.",
+        images: [
+          { file: "images/project_web_inventory/2.jpg", caption: "Web member administration dashboard with searchable demo records and management actions" },
+          { file: "images/project_web_inventory/3.jpg", caption: "QR-coded ID preview with demo member details and print controls" },
+          { file: "images/project_web_inventory/4.jpg", caption: "Printable QR-coded member ID using demo details" },
+          { file: "images/project_web_inventory/1.jpg", caption: "Web administration sign-in form" },
+        ],
+      },
+      "inventory-mobile": {
+        title: "Inventory & Member Management — Android Scanner",
+        description: "The connected Android app supports QR ID scanning and time-in registration. These screenshots show the empty time-in form and login screen.",
+        images: [
+          { file: "images/project_web_inventory/mobile1.jpg", caption: "Android time-in form with Scan ID and attendance registration controls" },
+          { file: "images/project_web_inventory/login.jpg", caption: "Android scanner login with username and password fields" },
+        ],
+      },
+      billiard: {
+        title: "Billiard Table Timer",
+        description: "A custom Android table timer built for a client, with per-table start and end controls and elapsed-time tracking. The venue photo shows the app in use at the client's location.",
+        images: [
+          { file: "images/project_billiard_timer/bea260ae-709b-4a4a-8781-91c7d1110f81.jpg", caption: "Android billiard table timer with per-table timing and start and end controls" },
+          { file: "images/project_billiard_timer/1785edb1-70e0-47ee-ad72-c31172c3bc10.jpg", caption: "The custom table timer in use at the client's billiard venue" },
+        ],
       },
     };
 

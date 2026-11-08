@@ -56,6 +56,8 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
 .button:hover { transform: translateY(-3px); }
 .button-lime { background: var(--lime); color: #1b382b; }
 .button-lime:hover { background: #e4ffba; }
+.button-secondary { background: transparent; border: 1px solid var(--line); color: var(--text); }
+.button-secondary:hover { background: var(--soft); }
 
 /* The quiet frame around a playful home screen. */
 .site-header { display: flex; align-items: center; justify-content: space-between; height: 100px; gap: 24px; }
@@ -248,7 +250,8 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
 .featured-capabilities .icon { width: 14px; height: 14px; margin-top: 1px; color: #658648; }
 .featured-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 17px; margin-top: 26px; }
 .featured-actions .button { font-size: 11px; padding: 14px 19px; gap: 20px; }
-.featured-actions > span { font-family: var(--mono); font-size: 8px; color: var(--muted); }
+.featured-gallery-summary { margin-top: 12px; font-family: var(--mono); font-size: 8px; line-height: 1.7; color: var(--muted); }
+.featured-contribution { max-width: 430px; margin-top: 18px; padding-left: 12px; border-left: 2px solid var(--line); font-size: 11px; line-height: 1.8; color: var(--muted); }
 .featured-preview { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 31px; min-width: 0; padding: 38px 32px; background: #e4e4f3; color: #4e4b70; text-align: left; overflow: hidden; }
 .featured-preview::before { content: ""; position: absolute; pointer-events: none; width: 550px; height: 550px; border: 1px solid #76749e22; border-radius: 50%; left: calc(50% - 275px); top: calc(50% - 275px); }
 .featured-preview-label { position: relative; display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 8px; letter-spacing: .8px; }
@@ -263,8 +266,34 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
 .app-sales { background: #d7d6ee; }
 .phone-project.phone-project-featured { padding: 11px 9px; margin-bottom: 3px; border: 1px solid #c7d4b7; border-radius: 12px; background: #e1e9d6; }
 .phone-project-featured small { color: #526345; }
+.phone-web-link { display: flex; align-items: center; width: 100%; gap: 8px; margin-bottom: 5px; padding: 8px 10px; background: transparent; color: #43583a; text-align: left; font-size: 9px; border-radius: 8px; }
+.phone-web-link:hover { background: #e1e9d6; }
+.phone-web-link > .icon { width: 15px; height: 15px; }
+.phone-web-link > .icon:last-child { margin-left: auto; width: 12px; height: 12px; }
 [data-theme="dark"] .featured-badge { background: #33482b; color: #d5efaf; }
 [data-theme="dark"] .featured-capabilities .icon { color: #a5c785; }
+
+/* A second connected system, with both real platform interfaces visible. */
+.inventory-featured .featured-copy h3 { font-size: 36px; line-height: 1.16; letter-spacing: -1.5px; }
+.inventory-preview { order: -1; background: #dbe4d2; color: #31482d; }
+.inventory-composition { position: relative; display: block; min-height: 360px; padding-block: 34px 20px; }
+.inventory-composition .browser-frame { position: relative; width: 95%; margin-top: 18px; transform: rotate(-4deg) translateX(-5px); }
+.inventory-preview:hover .browser-frame { transform: rotate(-2deg) translateX(-5px); }
+.inventory-handset { position: absolute; display: block; right: -4px; bottom: 3px; width: 137px; padding: 6px; border: 1px solid #677361; border-radius: 21px; background: #26302a; box-shadow: 9px 16px 22px #354b292e; transform: rotate(6deg); }
+.inventory-handset img { width: 100%; height: auto; border-radius: 14px; }
+
+/* The app and a photograph of the client's installed setup. */
+.billiard-visual { background: #dde5ec; color: #34475a; }
+.billiard-visual .visual-label { position: absolute; top: 26px; left: 26px; right: 26px; }
+.timer-phone { position: absolute; display: block; left: 13%; top: 55px; width: 145px; padding: 6px; border-radius: 20px; background: #26323d; border: 1px solid #6d7d89; transform: rotate(-6deg); box-shadow: 7px 12px 22px #2c46552b; transition: transform .3s; }
+.timer-phone img { width: 100%; height: auto; border-radius: 13px; }
+.client-setup-photo { position: absolute; display: block; right: 9%; top: 75px; width: 165px; height: 173px; padding: 5px 5px 17px; background: #f8fafb; border-radius: 7px; box-shadow: 6px 12px 20px #354d6026; transform: rotate(5deg); transition: transform .3s; }
+.client-setup-photo img { width: 100%; height: 100%; border-radius: 3px; object-fit: cover; object-position: 50% 35%; }
+.client-installation-label { position: absolute; display: flex; align-items: center; gap: 6px; right: 10%; bottom: 20px; padding: 7px 9px; border-radius: 5px; background: #f8fafbd9; font-family: var(--mono); font-size: 7px; color: #34475a; }
+.client-installation-label .status-dot { background: #597a45; width: 5px; height: 5px; }
+.billiard-visual:hover .timer-phone { transform: rotate(-3deg) translateY(-3px); }
+.billiard-visual:hover .client-setup-photo { transform: rotate(2deg); }
+.app-timer { background: #cddce9; }
 
 /* An initial takes the place of a portrait. */
 .about-section { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: center; }
@@ -616,6 +645,8 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
   .featured-copy { padding: 30px; }
   .featured-copy h3 { font-size: 42px; }
   .featured-preview { padding-inline: 26px; }
+  .timer-phone { left: 10%; width: 132px; top: 50px; }
+  .client-setup-photo { right: 8%; width: 145px; height: 155px; top: 66px; }
 }
 @media (max-width: 980px) {
   .featured-project { grid-template-columns: 1fr 1fr; }
@@ -624,6 +655,13 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
   .featured-description { font-size: 13px; }
   .featured-preview { padding-inline: 24px; }
   .featured-preview-label { font-size: 6px; letter-spacing: .5px; }
+  .inventory-featured .featured-copy h3 { font-size: 30px; }
+  .inventory-composition { min-height: 330px; padding-top: 26px; }
+  .inventory-composition .browser-frame { width: 100%; }
+  .inventory-handset { width: 118px; }
+  .timer-phone { left: 10%; width: 110px; top: 47px; }
+  .client-setup-photo { width: 120px; height: 133px; right: 7%; top: 58px; }
+  .client-installation-label { right: 64px; bottom: 14px; font-size: 6px; }
 }
 @media (max-width: 760px) {
   .featured-project { grid-template-columns: 1fr; }
@@ -634,6 +672,13 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
   .featured-copy h3 { margin-top: 22px; }
   .featured-description { max-width: none; font-size: 14px; }
   .featured-capabilities { grid-template-columns: 1fr 1fr; gap: 12px 17px; }
+  .inventory-featured .featured-copy h3 { font-size: 36px; }
+  .inventory-composition { min-height: 350px; max-width: 540px; width: 100%; margin-inline: auto; }
+  .inventory-composition .browser-frame { width: 93%; }
+  .inventory-handset { width: 135px; }
+  .timer-phone { left: 8%; width: 98px; top: 44px; }
+  .client-setup-photo { width: 99px; height: 112px; right: 7%; top: 50px; }
+  .client-installation-label { padding: 5px 7px; font-size: 5px; }
 }
 @media (max-width: 560px) {
   .featured-project { border-radius: 16px; }
@@ -652,8 +697,25 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
   .featured-capabilities { gap: 11px 10px; }
   .featured-capabilities li { font-size: 10px; gap: 5px; }
   .featured-actions { gap: 12px; }
-  .featured-actions .button { font-size: 10px; padding-inline: 16px; gap: 15px; }
-  .featured-actions > span { font-size: 7px; }
+  .featured-actions .button { flex: 1; min-width: 0; font-size: 10px; padding-inline: 10px; gap: 8px; }
+  .featured-actions .button .icon { width: 16px; height: 16px; }
+  .featured-gallery-summary { font-size: 7px; }
+  .featured-contribution { font-size: 10px; }
+  .inventory-featured .featured-copy h3 { font-size: 31px; }
+  .inventory-composition { min-height: 264px; padding-top: 23px; }
+  .inventory-composition .browser-frame { width: 96%; margin-top: 12px; }
+  .inventory-handset { width: 103px; padding: 5px; border-radius: 16px; right: -2px; }
+  .inventory-handset img { border-radius: 10px; }
+  .timer-phone { left: 10%; top: 49px; width: 122px; }
+  .client-setup-photo { right: 8%; top: 63px; width: 130px; height: 146px; }
+  .client-installation-label { right: 64px; bottom: 16px; font-size: 6px; }
+}
+@media (max-width: 359px) {
+  .inventory-featured .featured-copy h3 { font-size: 28px; }
+  .inventory-composition { min-height: 247px; }
+  .inventory-handset { width: 94px; }
+  .timer-phone { left: 8%; width: 109px; }
+  .client-setup-photo { right: 7%; width: 113px; height: 129px; top: 58px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

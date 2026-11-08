@@ -1,0 +1,7 @@
+# Prevent removed raw inventory screenshots from being accidentally re-added.
+# These contained identifiable member details, QR IDs, vote totals, or live settings.
+/images/project_web_inventory/mobile2.jpg
+/images/project_web_inventory/mobile3.jpg
+/images/project_web_inventory/web1.jpg
+/images/project_web_inventory/print qr.jpg
+/images/project_web_inventory/settings.jpg

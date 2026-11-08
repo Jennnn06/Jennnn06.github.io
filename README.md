@@ -9,7 +9,9 @@ Open `index.html` in your browser or use your editor's static preview server.
 - Interactive JenOS phone with Home, Work, Toolkit, and About screens.
 - Light and dark themes, with the visitor's choice saved locally.
 - Filterable projects and keyboard-accessible screenshot galleries.
-- Sales Pro leads as the featured company project, with a gallery of 12 app screenshots.
+- Sales Pro leads as the featured company project, with separate galleries for 12 Android screenshots and four web admin screenshots plus an illustrated reconstruction of the original login.
+- Inventory & Member Management follows as an Android scanner and web admin system, with separate mobile and demo-data web galleries.
+- Billiard Table Timer is presented as a custom client project, including a photograph of the app in use at the client's venue.
 - Responsive layouts and support for reduced motion.
 - Direct contact through LinkedIn, GitHub, and Facebook.
 
@@ -18,9 +20,15 @@ Open `index.html` in your browser or use your editor's static preview server.
 - **Content and links:** `index.html`
 - **Colors and layout:** `css/style_index.css` (theme variables at the top)
 - **Phone, filters, and galleries:** `js/switch_project.js`
-- **Project screenshots:** `images/project_sales_pro/`, `images/project_web_inventory/`, and `images/project_noli_me/`
+- **Project screenshots:** `images/project_sales_pro/`, `images/project_web_inventory/`, `images/project_billiard_timer/`, and `images/project_noli_me/`
 
-The legacy `index_test.html` redirects to the main portfolio. Google Fonts is optional; system fonts are used when it is unavailable.
+Google Fonts is optional; system fonts are used when it is unavailable.
+
+Sales Pro's web gallery starts with `web_login_reconstruction.png`, an AI-generated illustration of the original username/password modal based on Jen's description. It is labeled as a reconstruction rather than an original screenshot. The following four screenshots credit Jen's original functionality and note the interface was subsequently redesigned by another developer. The later login redesign is not included in the displayed galleries.
+
+The image was created with the built-in image generation tool. Its full prompt and reference are recorded in `docs/image-prompts/sales-pro-login.md`.
+
+The inventory showcase uses blank Android forms and the existing demo-data web screenshots. Unused images, including raw member records, QR receipts, the vote report, and live environment settings, have been deleted from the workspace. `.gitignore` retains exclusions for those raw inventory filenames to prevent accidental reintroduction.
 
 ## GitHub Pages
 
