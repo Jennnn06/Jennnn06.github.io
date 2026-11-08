@@ -9,6 +9,7 @@ Open `index.html` in your browser or use your editor's static preview server.
 - Interactive JenOS phone with Home, Work, Toolkit, and About screens.
 - Light and dark themes, with the visitor's choice saved locally.
 - Filterable projects and keyboard-accessible screenshot galleries.
+- Sales Pro leads as the featured company project, with a gallery of 12 app screenshots.
 - Responsive layouts and support for reduced motion.
 - Direct contact through LinkedIn, GitHub, and Facebook.
 
@@ -17,7 +18,7 @@ Open `index.html` in your browser or use your editor's static preview server.
 - **Content and links:** `index.html`
 - **Colors and layout:** `css/style_index.css` (theme variables at the top)
 - **Phone, filters, and galleries:** `js/switch_project.js`
-- **Project screenshots:** `images/project_web_inventory/` and `images/project_noli_me/`
+- **Project screenshots:** `images/project_sales_pro/`, `images/project_web_inventory/`, and `images/project_noli_me/`
 
 The legacy `index_test.html` redirects to the main portfolio. Google Fonts is optional; system fonts are used when it is unavailable.
 

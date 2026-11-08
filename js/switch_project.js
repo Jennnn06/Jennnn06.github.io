@@ -152,17 +152,39 @@
     if (!dialog || !galleryImage || !title || !description || !caption || !count) return;
 
     const galleries = {
+      sales: {
+        title: "Sales Pro — Android Point of Sale",
+        description: "My latest major company project: an Android point-of-sale system connecting checkout, payments, inventory, product management, and operational reporting.",
+        images: [
+          { file: "images/project_sales_pro/Screenshot_20261108-171141.png", caption: "Point-of-sale checkout with product browsing and cart" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171253.png", caption: "Payment details with cash tender, totals, and change" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171257.png", caption: "Sales invoice preview after finalizing a transaction" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171147.png", caption: "Inventory tools for physical counts and stock movements" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171157.png", caption: "Physical inventory form with product quantity reconciliation" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171207.png", caption: "Product, combo, category, and supplier management" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171217.png", caption: "Sales, inventory, user logs, and end-of-day reporting" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171314.png", caption: "UI, store, and Bluetooth or Wi-Fi printer settings" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171308.png", caption: "Cloud setup with server, branch, and cloud ID fields" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171110.png", caption: "Sales Pro Beta login and sync screen" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171351.png", caption: "Point-of-sale screen after voiding a transaction" },
+          { file: "images/project_sales_pro/Screenshot_20261108-171215.png", caption: "Reports menu with cashier and terminal operations" },
+        ],
+      },
       noli: {
         title: "Noli Me Tangere: Ibarra’s Quest",
         description: "A 2D educational capstone game that brings José Rizal’s novel to life through animated chapters, roleplay, and quizzes.",
-        folder: "project_noli_me",
-        count: 6,
+        images: Array.from({ length: 6 }, (_, index) => ({
+          file: `images/project_noli_me/${index + 1}.jpg`,
+          caption: `Ibarra’s Quest — screenshot ${index + 1} of 6`,
+        })),
       },
       inventory: {
         title: "Web Inventory Management",
         description: "An inventory and personnel management system with mobile integration, ID printing, and check-in and check-out tracking.",
-        folder: "project_web_inventory",
-        count: 4,
+        images: Array.from({ length: 4 }, (_, index) => ({
+          file: `images/project_web_inventory/${index + 1}.jpg`,
+          caption: `Web Inventory Management — screenshot ${index + 1} of 4`,
+        })),
       },
     };
 
@@ -172,43 +194,43 @@
     let opener;
 
     function showImage(index) {
-      if (!gallery) return;
-      imageIndex = (index + gallery.count) % gallery.count;
+      if (!gallery?.images.length) return;
+      imageIndex = (index + gallery.images.length) % gallery.images.length;
       const request = ++imageRequest;
       const selectedIndex = imageIndex;
       const selectedGallery = gallery;
+      const selectedImage = selectedGallery.images[selectedIndex];
       const preload = new Image();
       galleryImage.setAttribute("aria-busy", "true");
 
       preload.onload = () => {
         if (request !== imageRequest || !dialog.open) return;
-        const imageCaption = `${selectedGallery.title} — screenshot ${selectedIndex + 1} of ${selectedGallery.count}`;
         galleryImage.src = preload.src;
-        galleryImage.alt = imageCaption;
+        galleryImage.alt = `${selectedGallery.title} — ${selectedImage.caption}`;
         galleryImage.hidden = false;
         galleryImage.setAttribute("aria-busy", "false");
-        caption.textContent = imageCaption;
-        count.textContent = `${String(selectedIndex + 1).padStart(2, "0")} / ${String(selectedGallery.count).padStart(2, "0")}`;
+        caption.textContent = selectedImage.caption;
+        count.textContent = `${String(selectedIndex + 1).padStart(2, "0")} / ${String(selectedGallery.images.length).padStart(2, "0")}`;
       };
       preload.onerror = () => {
         if (request !== imageRequest || !dialog.open) return;
         galleryImage.setAttribute("aria-busy", "false");
         caption.textContent = "This screenshot could not load. Try another image using the arrow buttons.";
       };
-      preload.src = `images/${selectedGallery.folder}/${selectedIndex + 1}.jpg`;
+      preload.src = selectedImage.file;
     }
 
     document.querySelectorAll("[data-gallery]").forEach((button) => {
       button.addEventListener("click", () => {
         gallery = galleries[button.dataset.gallery];
-        if (!gallery) return;
+        if (!gallery?.images.length) return;
         opener = button;
         title.textContent = gallery.title;
         description.textContent = gallery.description;
         galleryImage.hidden = true;
         galleryImage.removeAttribute("src");
         caption.textContent = "Loading screenshot…";
-        count.textContent = `01 / ${String(gallery.count).padStart(2, "0")}`;
+        count.textContent = `01 / ${String(gallery.images.length).padStart(2, "0")}`;
         if (!dialog.open) dialog.showModal();
         showImage(0);
       });
