@@ -215,6 +215,14 @@
           { file: "images/project_billiard_timer/1785edb1-70e0-47ee-ad72-c31172c3bc10.jpg", caption: "The custom table timer in use at the client's billiard venue" },
         ],
       },
+      expenses: {
+        title: "Expenses Tracker",
+        description: "A custom desktop expense tracker built at my manager's request to record daily gross sales, itemized expenses, and deposits, with calculated totals and shortfalls. The records shown are made-up test data.",
+        images: [
+          { file: "images/project_expenses/main.PNG", caption: "Desktop expense overview showing demo gross sales, deposits, totals, and shortfalls" },
+          { file: "images/project_expenses/expenses_adder.PNG", caption: "Expense entry form with itemized rows, deposit, and calculated totals" },
+        ],
+      },
     };
 
     let gallery;

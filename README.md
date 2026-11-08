@@ -12,6 +12,8 @@ Open `index.html` in your browser or use your editor's static preview server.
 - Sales Pro leads as the featured company project, with separate galleries for 12 Android screenshots and four web admin screenshots plus an illustrated reconstruction of the original login.
 - Inventory & Member Management follows as an Android scanner and web admin system, with separate mobile and demo-data web galleries.
 - Billiard Table Timer is presented as a custom client project, including a photograph of the app in use at the client's venue.
+- Expenses Tracker is presented as a desktop tool built at the manager's request, with two screenshots using confirmed test data.
+- The toolkit lists Android development with Java, React for web interfaces, PHP & Laravel, and MySQL.
 - Responsive layouts and support for reduced motion.
 - Direct contact through LinkedIn, GitHub, and Facebook.
 
@@ -20,7 +22,7 @@ Open `index.html` in your browser or use your editor's static preview server.
 - **Content and links:** `index.html`
 - **Colors and layout:** `css/style_index.css` (theme variables at the top)
 - **Phone, filters, and galleries:** `js/switch_project.js`
-- **Project screenshots:** `images/project_sales_pro/`, `images/project_web_inventory/`, `images/project_billiard_timer/`, and `images/project_noli_me/`
+- **Project screenshots:** `images/project_sales_pro/`, `images/project_web_inventory/`, `images/project_billiard_timer/`, `images/project_expenses/`, and `images/project_noli_me/`
 
 Google Fonts is optional; system fonts are used when it is unavailable.
 

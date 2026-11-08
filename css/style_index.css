@@ -295,6 +295,19 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
 .billiard-visual:hover .client-setup-photo { transform: rotate(2deg); }
 .app-timer { background: #cddce9; }
 
+/* A desktop tool requested and used by the manager. */
+.expenses-visual { background: #e2e9da; color: #3b5334; }
+.expenses-visual .visual-label { position: absolute; top: 26px; left: 26px; right: 26px; }
+.expenses-window { position: absolute; display: block; top: 61px; left: 50%; width: 82%; max-width: 460px; border: 5px solid #f8faf3; border-radius: 8px; overflow: hidden; box-shadow: 7px 15px 25px #32492a25; transform: translateX(-50%) rotate(3deg); transition: transform .3s; }
+.expenses-window img { width: 100%; height: auto; }
+.expenses-visual:hover .expenses-window { transform: translateX(-50%) rotate(1deg) translateY(-3px); }
+.expense-demo-label { position: absolute; left: 22px; bottom: 18px; padding: 6px 9px; border-radius: 5px; background: #f8faf3eb; color: #3b5334; font-family: var(--mono); font-size: 7px; }
+.app-expenses { background: #d5e1c8; }
+.capstone-project { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.05fr; }
+.capstone-project .project-visual { height: 100%; min-height: 285px; }
+.capstone-project .project-content { display: flex; flex-direction: column; justify-content: center; padding: 32px; }
+.capstone-project .project-bottom { margin-top: 24px; }
+
 /* An initial takes the place of a portrait. */
 .about-section { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: center; }
 .about-art { position: relative; min-height: 458px; background: #e5e9da; color: #304a2e; border-radius: 20px; overflow: hidden; padding: 28px; }
@@ -316,7 +329,7 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
 .text-link .icon { width: 17px; height: 17px; transition: transform .2s; }
 .text-link:hover .icon { transform: translate(2px, -2px); }
 .toolkit-heading-icon { width: 34px; height: 34px; margin-bottom: 4px; color: var(--muted); }
-.toolkit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 32px; }
+.toolkit-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 32px; }
 .tool-card { position: relative; background: transparent; border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
 .tool-icon { display: flex; align-items: center; justify-content: center; width: 43px; height: 43px; border-radius: 13px; background: var(--soft); color: var(--text); }
 .tool-icon .icon { width: 23px; height: 23px; }
@@ -327,6 +340,8 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
 .android-tool { background: #dce8ca; border-color: #dce8ca; color: #2e4729; }
 .android-tool .tool-icon { background: #c9ddae; color: #36552a; }
 .android-tool .tool-index, .android-tool .tool-label, .android-tool p { color: #526345; }
+.react-tool .tool-icon { background: #dbe8ea; color: #32636c; }
+[data-theme="dark"] .react-tool .tool-icon { background: #2b4245; color: #9ccdd2; }
 
 .contact-section { background: #1b382b; color: #f3f4e9; padding: 34px 44px 25px; border-radius: 24px; }
 .contact-topline { display: flex; align-items: center; justify-content: space-between; padding-bottom: 25px; border-bottom: 1px solid #6683674a; color: #c1d0b8; }
@@ -433,6 +448,7 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
   .about-spark { width: 60px; height: 60px; top: 126px; right: 16px; }
   .about-art-label { font-size: 6px; }
   .tool-card { padding: 24px 20px; }
+  .toolkit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tool-card h3 { font-size: 21px; }
   .tool-label { font-size: 6px; letter-spacing: .3px; }
   .contact-cta { margin-right: 8px; }
@@ -567,6 +583,9 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; }
   .project-count { font-size: 8px; }
   .project-grid { grid-template-columns: 1fr; gap: 22px; }
   .project-card { border-radius: 16px; }
+  .capstone-project { grid-template-columns: 1fr; }
+  .capstone-project .project-visual { height: 245px; min-height: 0; }
+  .capstone-project .project-content { padding: 25px 23px; }
   .project-visual { height: 245px; padding: 24px 24px 0; }
   .visual-label { font-size: 7px; letter-spacing: .7px; }
   .browser-frame { margin-top: 29px; }
