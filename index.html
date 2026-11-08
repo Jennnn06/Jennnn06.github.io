@@ -1,213 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yes, I am Jennnn06</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <!-- CSS -->
-    <link href="css/style_index.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5ef">
+  <meta name="description" content="Hi, I'm Jen — an Android developer building thoughtful mobile experiences, connected systems, and a few things just for the joy of it. Explore my work.">
+  <title>Jen — Android Developer</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="css/style_index.css" rel="stylesheet">
+  <script>try{if(localStorage.getItem('jen-portfolio-theme')==='dark')document.documentElement.dataset.theme='dark'}catch{}</script>
+  <script src="js/switch_project.js" defer></script>
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-        <div class="container">
-        <a class="navbar-brand" href="#about">Jennnn06</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar" aria-controls="portfolioNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="portfolioNavbar">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            </ul>
-        </div>
-        </div>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about" class="about-section">
-        <div class="container">
-        <div class="row align-items-center">
-            <!-- Profile Picture -->
-            <div class="col-md-4 text-center mb-4 mb-md-0">
-            <div class="profile-pic">
-<!--                 <img src="images/me.jpg" alt="me" class="img-fluid"> -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="i-android" viewBox="0 0 24 24"><path d="m7 5-2-3m12 3 2-3M3 14a9 9 0 0 1 18 0Z"/><path d="M3 14v4h18v-4M7 18v3m10-3v3"/><circle cx="8" cy="10" r=".8" fill="currentColor" stroke="none"/><circle cx="16" cy="10" r=".8" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14 6a5 5 0 0 0-6 6l-5 5a2.1 2.1 0 0 0 3 3l5-5a5 5 0 0 0 6-6l-3 3-3-3Z"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14A9 9 0 0 1 10 3a9 9 0 1 0 10 11Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 6v-4a3.5 3.5 0 0 0-1-2.5c3.3-.4 6.7-1.6 6.7-7a5.5 5.5 0 0 0-1.5-3.8 5.1 5.1 0 0 0-.1-3.7s-1.2-.4-4 1.5a13 13 0 0 0-7.2 0C5.1.6 3.9 1 3.9 1a5.1 5.1 0 0 0-.1 3.7 5.5 5.5 0 0 0-1.5 3.8c0 5.4 3.4 6.6 6.7 7A3.5 3.5 0 0 0 8 18v4" transform="translate(1 0) scale(.92)"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="8" width="4" height="13" rx="1"/><circle cx="5" cy="3.5" r="1.5"/><path d="M11 21V8h4v2c3-4 7-2 7 2v9h-4v-8a1.5 1.5 0 0 0-3 0v8Z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5A9.5 9.5 0 0 1 7 20l-5 2 2-5A9.5 9.5 0 1 1 21 11.5Z"/><path d="M7 11h10m-10 4h6"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0m-11 4a6 6 0 0 1 8 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 8 10-5 10 5-10 5ZM6 10v7c3 3 9 3 12 0v-7m4-2v9"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 3h14v19l-3-2-4 2-4-2-3 2ZM9 7h6m-6 4h6m-6 4h3"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5Z"/></symbol>
+  </svg>
+  <header class="site-header page-width">
+    <a class="brand" href="#home" aria-label="Jen, back to home"><span class="brand-mark">j<span>.</span></span><span class="brand-name">jen<span class="brand-extension">.dev</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="#projects" data-section-link>Work</a><a href="#about" data-section-link>About</a><a href="#toolkit" data-section-link>Toolkit</a></nav>
+    <div class="header-actions"><button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark theme" aria-pressed="false"><svg class="icon moon-icon"><use href="#i-moon"/></svg><svg class="icon sun-icon"><use href="#i-sun"/></svg></button><a class="header-contact" href="#contact">Let’s talk <svg class="icon"><use href="#i-up-right"/></svg></a></div>
+  </header>
+  <main id="main">
+    <section class="hero page-width" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow hero-eyebrow"><svg class="icon"><use href="#i-android"/></svg> ANDROID DEVELOPER</span>
+        <h1 id="hero-title">Small screen.<br>Big <span>possibilities.</span></h1>
+        <p class="hero-intro">Hey, I’m Jen <span class="hello-spark" aria-hidden="true">✳</span></p>
+        <p class="hero-description">I turn everyday problems into thoughtful apps.<br class="desktop-break"> From Android experiences to the systems behind them.</p>
+        <div class="hero-actions"><a class="button button-lime" href="#projects">Explore my work <svg class="icon"><use href="#i-arrow"/></svg></a><a class="hero-github" href="https://github.com/Jennnn06" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"/></svg> GitHub <svg class="icon small-icon"><use href="#i-up-right"/></svg></a></div>
+        <div class="hero-footnote"><span class="status-dot"></span> Curiosity-driven. Detail-oriented. Always building.</div>
+      </div>
+      <div class="phone-stage">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <span class="phone-annotation"><span aria-hidden="true">↙</span> Go on, tap around.</span>
+        <div class="phone" aria-label="Interactive JenOS portfolio phone">
+          <span class="phone-side-button" aria-hidden="true"></span><span class="phone-camera" aria-hidden="true"></span>
+          <div class="phone-display">
+            <div class="phone-status"><span id="phoneTime">09:41</span><span class="phone-status-icons"><svg class="icon"><use href="#i-wifi"/></svg><span class="signal-bars" aria-label="Full signal"><i></i><i></i><i></i><i></i></span><span class="battery" aria-label="Full battery"></span></span></div>
+            <div class="phone-app-bar"><span class="phone-os">Jen<span>OS</span></span><span class="phone-version">portfolio / v.01</span></div>
+            <div class="phone-tabs" role="tablist" aria-label="Explore the portfolio phone"><button id="phone-tab-home" type="button" role="tab" data-phone-tab="home" aria-controls="phone-panel-home" aria-selected="true"><svg class="icon"><use href="#i-home"/></svg><span>Home</span></button><button id="phone-tab-work" type="button" role="tab" data-phone-tab="work" aria-controls="phone-panel-work" aria-selected="false" tabindex="-1"><svg class="icon"><use href="#i-grid"/></svg><span>Work</span></button><button id="phone-tab-toolkit" type="button" role="tab" data-phone-tab="toolkit" aria-controls="phone-panel-toolkit" aria-selected="false" tabindex="-1"><svg class="icon"><use href="#i-tool"/></svg><span>Toolkit</span></button><button id="phone-tab-about" type="button" role="tab" data-phone-tab="about" aria-controls="phone-panel-about" aria-selected="false" tabindex="-1"><svg class="icon"><use href="#i-person"/></svg><span>About</span></button></div>
+            <div class="phone-panels">
+              <section class="phone-panel phone-home" id="phone-panel-home" data-phone-panel="home" role="tabpanel" aria-labelledby="phone-tab-home" tabindex="0">
+                <div class="phone-date" id="phoneDate">A good day to build something.</div><div class="phone-greeting">A developer.<br>A little different.</div>
+                <div class="android-widget" aria-hidden="true"><div class="android-antenna antenna-left"></div><div class="android-antenna antenna-right"></div><div class="android-head"><i></i><i></i></div><span class="widget-spark spark-one">✳</span><span class="widget-spark spark-two">+</span><span class="widget-caption">hello, android.</span></div>
+                <div class="phone-mini-widget"><span class="mini-widget-icon"><svg class="icon"><use href="#i-code"/></svg></span><span><strong>Ideas into interfaces.</strong><small>One thoughtful detail at a time.</small></span><span class="mini-widget-dot"></span></div>
+                <div class="phone-apps"><button class="phone-app" type="button" data-phone-open="work"><span class="app-icon app-work"><svg class="icon"><use href="#i-grid"/></svg></span><span>My work</span></button><button class="phone-app" type="button" data-phone-open="toolkit"><span class="app-icon app-toolkit"><svg class="icon"><use href="#i-tool"/></svg></span><span>Toolkit</span></button><button class="phone-app" type="button" data-phone-open="about"><span class="app-icon app-about"><svg class="icon"><use href="#i-person"/></svg></span><span>About me</span></button><a class="phone-app" href="#contact"><span class="app-icon app-contact"><svg class="icon"><use href="#i-chat"/></svg></span><span>Say hello</span></a></div>
+              </section>
+              <section class="phone-panel" id="phone-panel-work" data-phone-panel="work" role="tabpanel" aria-labelledby="phone-tab-work" tabindex="0" hidden>
+                <div class="phone-section-label">THE APP DRAWER</div><h2>Things I’ve built.</h2><p class="phone-panel-intro">Different ideas. The same attention to detail.</p>
+                <button class="phone-project" type="button" data-gallery="inventory"><span class="app-icon app-work"><svg class="icon"><use href="#i-database"/></svg></span><span><strong>Inventory Management</strong><small>Connected systems</small></span><svg class="icon"><use href="#i-chevron"/></svg></button>
+                <button class="phone-project" type="button" data-gallery="noli"><span class="app-icon app-toolkit"><svg class="icon"><use href="#i-spark"/></svg></span><span><strong>Ibarra’s Quest</strong><small>Interactive learning</small></span><svg class="icon"><use href="#i-chevron"/></svg></button>
+                <a class="phone-project" href="#pos-project"><span class="app-icon app-about"><svg class="icon"><use href="#i-receipt"/></svg></span><span><strong>Point of Sale</strong><small>Online &amp; offline</small></span><svg class="icon"><use href="#i-chevron"/></svg></a>
+                <a class="phone-text-link" href="#projects">Explore all projects <svg class="icon"><use href="#i-arrow"/></svg></a>
+              </section>
+              <section class="phone-panel" id="phone-panel-toolkit" data-phone-panel="toolkit" role="tabpanel" aria-labelledby="phone-tab-toolkit" tabindex="0" hidden>
+                <div class="phone-section-label">UNDER THE HOOD</div><h2>The right tools.<br>The right details.</h2><p class="phone-panel-intro">Mobile up front. A solid system underneath.</p>
+                <div class="phone-tool"><svg class="icon"><use href="#i-android"/></svg><span><strong>Android</strong><small>Mobile development</small></span></div><div class="phone-tool"><svg class="icon"><use href="#i-code"/></svg><span><strong>PHP &amp; Laravel</strong><small>Web &amp; connected systems</small></span></div><div class="phone-tool"><svg class="icon"><use href="#i-database"/></svg><span><strong>MySQL</strong><small>Data that stays organized</small></span></div><a class="phone-text-link" href="#toolkit">A closer look <svg class="icon"><use href="#i-arrow"/></svg></a>
+              </section>
+              <section class="phone-panel" id="phone-panel-about" data-phone-panel="about" role="tabpanel" aria-labelledby="phone-tab-about" tabindex="0" hidden>
+                <div class="phone-section-label">THE PERSON BEHIND THE PIXELS</div><div class="phone-avatar" aria-hidden="true">j.</div><h2>Hey, I’m Jen.</h2><p class="phone-panel-intro">Android developer from the Philippines. I like solving practical problems and making the small details feel right.</p><div class="phone-about-note"><svg class="icon"><use href="#i-cap"/></svg><span>STI College Ortigas Cainta<br><strong>Class of 2024</strong></span></div><a class="phone-text-link" href="#about">More about me <svg class="icon"><use href="#i-arrow"/></svg></a>
+              </section>
             </div>
-            </div>
-            <!-- About Text -->
-            <div class="col-md-8">
-            <h1>Hi, I am Jen</h1>
-            <p>
-              I graduated from STI College Ortigas Cainta in July 2024 and began my web development journey as an intern at JJEEMZS Construction Services. There, I developed an inventory management system for tool tracking and created a promotional website, honing my skills in PHP and SQL using phpMyAdmin.
-            </p>
-            <p>
-              In May 2024, a client commissioned me to develop a custom point-of-sale (POS) system. This ongoing project features both online and offline integration, ensuring seamless operation in stores with limited or no Wi-Fi connectivity. It also involves integrating printer functionalities for receipt generation and ensuring compliance with BIR tax regulations in the Philippines. Recognizing the potential of this solution, the client expanded our collaboration on August 13, 2024, entrusting me with further development of their digital solutions.
-            </p>
-            <p>
-              Building on these experiences, I have further expanded my technical expertise by developing a PHP-based inventory management website with mobile integration. This system features ID printing capabilities and a mobile-based time tracking mechanism for monitoring the check-in and check-out of inventory members, demonstrating my proficiency in MySQL.
-            </p>
-            </div>
-        </div>
-        </div>
-  </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-    <div class="container">
-      <!-- Project Items Wrapper -->
-      <div id="projectItems">
-
-        <!-- Noli Me Tangere -->
-        <div class="project-item" data-project-index="0">
-          <div class="row">
-            <!-- Left Panel: Project Info -->
-            <div class="col-md-4 mb-4">
-              <h2 id="projectTitle0">Project: Noli Me Tangere: Ibarra's Quest</h2>
-              <p id="projectDescription0">
-                Noli Me Tangere: Ibarra's Quest is a 2D interactive game I developed as my capstone project. Inspired by Jose Rizal's classic novel, this game reinterprets literature through engaging roleplay and educational challenges. Players embody Ibarra, progressing through the story by watching animated chapters and answering quiz-based questions that deepen their understanding of the narrative.
-              </p>
-            </div>
-            <!-- Right Panel: Carousel for Project Images -->
-            <div class="col-md-8">
-              <div id="projectCarousel0" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="images/project_noli_me/1.jpg" class="d-block w-100" alt="Project 1 - Picture 1">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/project_noli_me/2.jpg" class="d-block w-100" alt="Project 1 - Picture 2">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/project_noli_me/3.jpg" class="d-block w-100" alt="Project 1 - Picture 3">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/project_noli_me/4.jpg" class="d-block w-100" alt="Project 1 - Picture 3">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/project_noli_me/5.jpg" class="d-block w-100" alt="Project 1 - Picture 3">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/project_noli_me/6.jpg" class="d-block w-100" alt="Project 1 - Picture 3">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel0" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel0" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
+            <div class="android-navigation" aria-label="Phone system navigation"><button type="button" data-phone-action="back" aria-label="Go back in phone"><span class="nav-triangle"></span></button><button type="button" data-phone-action="home" aria-label="Phone home"><span class="nav-circle"></span></button><button type="button" data-phone-action="recent" aria-label="Next phone app"><span class="nav-square"></span></button></div>
           </div>
         </div>
-
-        <!-- Web Inventory Management -->
-        <div class="project-item d-none" data-project-index="1">
-          <div class="row">
-            <!-- Left Panel: Project Info -->
-            <div class="col-md-4 mb-4">
-              <h2 id="projectTitle1">Project: Web Inventory Management</h2>
-              <p id="projectDescription1">
-                Web Inventory Management serves as a critical component of my inventory and personnel management solution. 
-                This organized presentation of data underscores the system’s robust design and its commitment to maintaining data integrity for efficient operational oversight. Additionally, it includes advanced applications developed with modern frameworks such as Laravel.
-              </p>
-            </div>
-            <!-- Right Panel: Carousel for Project Images -->
-            <div class="col-md-8">
-              <div id="projectCarousel1" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="images/project_web_inventory/1.jpg" class="d-block w-100" alt="Project 2 - Picture 1">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/project_web_inventory/2.jpg" class="d-block w-100" alt="Project 2 - Picture 2">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/project_web_inventory/3.jpg" class="d-block w-100" alt="Project 2 - Picture 3">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/project_web_inventory/4.jpg" class="d-block w-100" alt="Project 2 - Picture 3">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel1" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel1" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Add additional project items here following the same structure -->
+        <div class="phone-floating-label"><span class="status-dot"></span> A portfolio you can play with.</div>
       </div>
-      <!-- Navigation Buttons for Switching Projects -->
-      <div class="d-flex justify-content-between mt-3">
-        <button id="prevProjectMain" class="btn btn-outline-light">&laquo; Previous Project</button>
-        <button id="nextProjectMain" class="btn btn-outline-light">Next Project &raquo;</button>
-      </div>
-    </div>
     </section>
-
-  <!-- Contact Form Section -->
-  <section id="contact" class="contact-form">
-        <div class="container">
-        <h2 class="mb-4">Contact Me</h2>
-        <p>Feel free to reach out for collaborations or any inquiries.</p>
-        <form action="send_email.php" method="POST">
-            <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" name="name" class="form-control" required>
-            </div>
-            <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
-            </div>
-            <div class="text-end">
-                <button type="submit" class="btn btn-success">Send Message</button>
-            </div>
-        </form>
-        </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container d-flex justify-content-between align-items-center py-3">
-      <div class="d-flex align-items-center">
-        <a href="https://www.facebook.com/jenron19" target="_blank" class="text-light me-3">
-          <i class="bi bi-facebook" style="font-size: 2rem;"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/jccondestable" target="_blank" class="text-light me-3">
-          <i class="bi bi-linkedin" style="font-size: 2rem;"></i>
-        </a>
+    <div class="specialties page-width" aria-label="Development focus"><span>BUILT WITH INTENTION</span><div><svg class="icon"><use href="#i-android"/></svg> Android development</div><span class="specialty-divider" aria-hidden="true">✳</span><div><svg class="icon"><use href="#i-wifi"/></svg> Online &amp; offline systems</div><span class="specialty-divider" aria-hidden="true">✳</span><div><svg class="icon"><use href="#i-code"/></svg> A thoughtful user experience</div></div>
+    <section class="work-section page-width section-space" id="projects" aria-labelledby="work-title">
+      <div class="section-heading"><div><span class="eyebrow section-eyebrow"><span class="section-number">01 /</span> SELECTED WORK</span><h2 id="work-title">From idea to <span class="serif-word">in your hands.</span></h2></div><span class="section-aside">Real problems.<br>Things I’ve built to solve them.</span></div>
+      <div class="work-toolbar"><div class="project-filters" role="group" aria-label="Filter projects"><button type="button" data-project-filter="all" aria-pressed="true">All projects <span>03</span></button><button type="button" data-project-filter="systems" aria-pressed="false">Systems</button><button type="button" data-project-filter="interactive" aria-pressed="false">Interactive</button></div><span id="projectCount" class="project-count" aria-live="polite">03 projects</span></div>
+      <div class="project-grid">
+        <article class="project-card" data-project-card data-category="systems"><button class="project-visual inventory-visual" type="button" data-gallery="inventory" aria-label="View Web Inventory Management screenshots"><span class="visual-label">WEB + MOBILE INTEGRATION</span><span class="browser-frame"><span class="browser-toolbar"><span></span><span></span><span></span><i>inventory / dashboard</i></span><img src="images/project_web_inventory/2.jpg" alt="Inventory management dashboard with searchable manager records and ID printing actions" width="1365" height="624" loading="lazy"></span><span class="visual-action"><svg class="icon"><use href="#i-up-right"/></svg></span></button><div class="project-content"><div class="project-meta"><span>CONNECTED SYSTEMS</span><span>01</span></div><h3>Web Inventory Management</h3><p>Keeping inventory and people in sync. A web system with mobile time tracking, member management, and ID printing.</p><div class="project-bottom"><div class="tags"><span>PHP</span><span>MySQL</span><span>Mobile integration</span></div><button class="project-open" type="button" data-gallery="inventory" aria-label="Open Web Inventory Management gallery"><svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
+        <article class="project-card" data-project-card data-category="interactive"><button class="project-visual game-visual" type="button" data-gallery="noli" aria-label="View Ibarra’s Quest screenshots"><span class="visual-label">A CLASSIC STORY. A NEW WAY TO PLAY.</span><span class="game-screenshot"><img src="images/project_noli_me/1.jpg" alt="Ibarra’s Quest title screen, a pixel-art game based on Noli Me Tangere" width="1612" height="720" loading="lazy"></span><span class="game-star" aria-hidden="true">✳</span><span class="visual-action"><svg class="icon"><use href="#i-up-right"/></svg></span></button><div class="project-content"><div class="project-meta"><span>CAPSTONE / EDUCATIONAL GAME</span><span>02</span></div><h3>Ibarra’s Quest</h3><p>Bringing Noli Me Tangere to life through a 2D adventure, animated chapters, and quizzes that make literature interactive.</p><div class="project-bottom"><div class="tags"><span>2D game</span><span>Storytelling</span><span>Education</span></div><button class="project-open" type="button" data-gallery="noli" aria-label="Open Ibarra’s Quest gallery"><svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
+        <article class="pos-project" id="pos-project" data-project-card data-category="systems"><div class="pos-art" aria-hidden="true"><div class="receipt"><svg class="icon"><use href="#i-receipt"/></svg><strong>MADE TO KEEP GOING.</strong><span class="receipt-line"></span><span>Connection <b>optional</b></span><span>Good experience <b>essential</b></span><span class="receipt-line"></span><span class="receipt-total">Offline? Still on. <svg class="icon"><use href="#i-check"/></svg></span></div><span class="pos-stamp"><svg class="icon"><use href="#i-wifi"/></svg></span></div><div class="pos-content"><div class="project-meta"><span>CLIENT PROJECT / 03</span><svg class="icon"><use href="#i-receipt"/></svg></div><h3>Business doesn’t stop.<br>Neither should the app.</h3><p>A custom point-of-sale system designed for online and offline use, with receipt printer integration for stores with unreliable connectivity.</p><div class="tags"><span>Point of sale</span><span>Offline capability</span><span>Receipt printing</span></div></div></article>
       </div>
-      <span>&copy; 2025. All rights reserved.</span>
-    </div>
-  </footer>  
-
-  <!-- Bootstrap JS Bundle (includes Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-  <!-- Switch Project -->
-  <script src="js/switch_project.js"></script>
+    </section>
+    <section class="about-section page-width section-space" id="about" aria-labelledby="about-title">
+      <div class="about-art" aria-hidden="true"><div class="about-art-label">A CURIOUS MIND.<br>A BUILDER AT HEART.</div><div class="initials-art">j<span>.</span></div><svg class="about-spark"><use href="#i-spark"/></svg><div class="about-art-bottom"><span>JEN / JENNNN06</span><span>☺</span></div></div>
+      <div class="about-copy"><span class="eyebrow section-eyebrow"><span class="section-number">02 /</span> BEHIND THE SCREEN</span><h2 id="about-title">A person who likes<br>making things <span class="serif-word">work.</span></h2><p class="about-lead">I’m Jen, an Android developer with a soft spot for useful, well-considered software.</p><p>My journey started with PHP and SQL during an internship at JJEEMZS Construction Services, building tools to track inventory and help a business run. Since then, I’ve worked on point-of-sale systems, mobile-connected tools, and an educational game.</p><p>Today, I bring that same practical mindset to Android: understand the problem, build with care, and keep improving the details.</p><div class="about-details"><span><svg class="icon"><use href="#i-pin"/></svg> Based in the Philippines</span><span><svg class="icon"><use href="#i-cap"/></svg> STI Ortigas Cainta · 2024</span></div><a class="text-link" href="https://www.linkedin.com/in/jccondestable" target="_blank" rel="noopener noreferrer">More of my journey <svg class="icon"><use href="#i-up-right"/></svg></a></div>
+    </section>
+    <section class="toolkit-section page-width section-space" id="toolkit" aria-labelledby="toolkit-title"><div class="section-heading"><div><span class="eyebrow section-eyebrow"><span class="section-number">03 /</span> UNDER THE HOOD</span><h2 id="toolkit-title">A few tools. <span class="serif-word">Plenty of possibilities.</span></h2></div><svg class="toolkit-heading-icon icon"><use href="#i-tool"/></svg></div><div class="toolkit-grid"><div class="tool-card android-tool"><span class="tool-icon"><svg class="icon"><use href="#i-android"/></svg></span><span class="tool-index">01</span><h3>Android</h3><p>Mobile experiences built around the way people actually use their phones.</p><span class="tool-label">MY MAIN FOCUS</span></div><div class="tool-card"><span class="tool-icon"><svg class="icon"><use href="#i-code"/></svg></span><span class="tool-index">02</span><h3>PHP &amp; Laravel</h3><p>The web applications and connected systems working behind the scenes.</p><span class="tool-label">THE SUPPORTING SYSTEMS</span></div><div class="tool-card"><span class="tool-icon"><svg class="icon"><use href="#i-database"/></svg></span><span class="tool-index">03</span><h3>MySQL</h3><p>Structured data for inventory, people, and the details that matter.</p><span class="tool-label">A SOLID FOUNDATION</span></div></div></section>
+    <section class="contact-section page-width section-space" id="contact" aria-labelledby="contact-title"><div class="contact-topline"><span class="eyebrow"><span class="section-number">04 /</span> MAKE A CONNECTION</span><svg class="icon"><use href="#i-chat"/></svg></div><div class="contact-main"><div><h2 id="contact-title">Got something<br>in <span>mind?</span></h2><p>An app idea, a collaboration, or just a good conversation.<br>My next favorite project might start with a hello.</p></div><a class="contact-cta" href="https://www.linkedin.com/in/jccondestable" target="_blank" rel="noopener noreferrer" aria-label="Say hello to Jen on LinkedIn"><svg class="icon"><use href="#i-up-right"/></svg><span>Say hello</span></a></div><div class="contact-bottom"><span><span class="status-dot"></span> GOOD THINGS START WITH A CONVERSATION.</span><div><a href="https://github.com/Jennnn06" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon"><use href="#i-up-right"/></svg></a><a href="https://www.linkedin.com/in/jccondestable" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="icon"><use href="#i-up-right"/></svg></a><a href="https://www.facebook.com/jenron19" target="_blank" rel="noopener noreferrer">Facebook <svg class="icon"><use href="#i-up-right"/></svg></a></div></div></section>
+  </main>
+  <footer class="site-footer page-width"><a class="brand footer-brand" href="#home"><span class="brand-mark">j<span>.</span></span><span>Built with care. A little Android energy.</span></a><span>© <span id="currentYear">2026</span> Jen</span><a class="back-to-top" href="#home">Back to top <svg class="icon"><use href="#i-up-right"/></svg></a></footer>
+  <dialog class="project-dialog" id="projectDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription"><div class="dialog-header"><div><span class="eyebrow">A CLOSER LOOK</span><h2 id="dialogTitle">Project gallery</h2></div><button class="icon-button" id="closeGallery" type="button" aria-label="Close project gallery"><svg class="icon"><use href="#i-close"/></svg></button></div><p id="dialogDescription"></p><div class="gallery-image-wrap"><img id="galleryImage" alt="" width="1600" height="900"></div><div class="gallery-toolbar"><p id="galleryCaption"></p><div class="gallery-controls"><button class="icon-button gallery-previous" id="galleryPrevious" type="button" aria-label="Previous screenshot"><svg class="icon"><use href="#i-chevron"/></svg></button><span id="galleryCount" aria-live="polite"></span><button class="icon-button" id="galleryNext" type="button" aria-label="Next screenshot"><svg class="icon"><use href="#i-chevron"/></svg></button></div></div><span class="gallery-hint">Use ← → to explore · Esc to close</span></dialog>
 </body>
 </html>
